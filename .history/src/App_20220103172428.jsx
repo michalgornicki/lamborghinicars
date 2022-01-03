@@ -131,7 +131,7 @@ function App() {
           <div className="overflow-hidden"><img className="image-square" src={Img7} alt="" /></div>
         </div>
         <div className="column d-flex flex-column">
-        <div className="overflow-hidden"><img className="image-square-large" src={Img8} alt="" /></div>
+        <div className="overflow-hidden"><img className="image-square-large" src={Img8} alt="" />
         </div>
       </Container>
 

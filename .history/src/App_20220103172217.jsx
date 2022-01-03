@@ -127,11 +127,11 @@ function App() {
 
       <Container className="w-75 m-auto position-relative p-0 mb-5 d-flex flex-row">
         <div className="column d-flex flex-column">
-          <div className="overflow-hidden"><img className="image-square" src={Img6} alt="" /></div>
-          <div className="overflow-hidden"><img className="image-square" src={Img7} alt="" /></div>
+          <div><img className="image-square" src={Img6} alt="" /></div>
+          <img className="image-square" src={Img7} alt="" />
         </div>
         <div className="column d-flex flex-column">
-        <div className="overflow-hidden"><img className="image-square-large" src={Img8} alt="" /></div>
+          <img className="image-square-large" src={Img8} alt="" />
         </div>
       </Container>
 

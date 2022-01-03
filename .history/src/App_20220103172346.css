@@ -32,23 +32,17 @@ body{
     width: 100%;
     height: 45vh;
     object-fit: cover;
-    transition: 5s;
+    transition: 0.s;
 }
 
 .image-square:hover{
-    transform: scale(1.1);
-}
-
-.image-square-large:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .image-square-large{
     width: 100%;
     height: 90vh;
     object-fit: cover;
-    object-fit: cover;
-    transition: 5s;
 
 }
 
