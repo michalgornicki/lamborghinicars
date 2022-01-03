@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/lamborghinicars/static/css/main.1b48bd49.css",
+    "main.js": "/lamborghinicars/static/js/main.898cfc0d.js",
+    "static/js/787.318c229e.chunk.js": "/lamborghinicars/static/js/787.318c229e.chunk.js",
+    "static/media/sample.mp4": "/lamborghinicars/static/media/sample.1ff1d9c4cf49d5be3525.mp4",
+    "static/media/7.jpg": "/lamborghinicars/static/media/7.200b74fac8d9774e1878.jpg",
+    "static/media/3.jpg": "/lamborghinicars/static/media/3.4ccf52b70a8b2787282b.jpg",
+    "static/media/8.jpg": "/lamborghinicars/static/media/8.4b577b5a758624ddcf76.jpg",
+    "static/media/4.jpg": "/lamborghinicars/static/media/4.2a80bd8cd8e284bf0073.jpg",
+    "static/media/dealer.jpg": "/lamborghinicars/static/media/dealer.216d0b1feb8a6ea63bc5.jpg",
+    "static/media/2.jpg": "/lamborghinicars/static/media/2.31861fad3537ccfbf8be.jpg",
+    "static/media/5.jpg": "/lamborghinicars/static/media/5.5f0b317710111832bf9e.jpg",
+    "static/media/6.jpg": "/lamborghinicars/static/media/6.7f0e472f0942722b383a.jpg",
+    "index.html": "/lamborghinicars/index.html",
+    "main.1b48bd49.css.map": "/lamborghinicars/static/css/main.1b48bd49.css.map",
+    "main.898cfc0d.js.map": "/lamborghinicars/static/js/main.898cfc0d.js.map",
+    "787.318c229e.chunk.js.map": "/lamborghinicars/static/js/787.318c229e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1b48bd49.css",
+    "static/js/main.898cfc0d.js"
+  ]
+}
