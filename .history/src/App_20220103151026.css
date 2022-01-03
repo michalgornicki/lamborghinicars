@@ -1,0 +1,27 @@
+.video {
+  width: 100%;
+}
+
+.nav-link {
+  color: white !important;
+}
+
+.dropdown-menu {
+  background-color: black;
+}
+
+.dropdown-item {
+  color: white !important;
+}
+
+.dropdown-menu{
+    height: 0vh;
+    animation: 1s;
+    display: block;
+}
+
+.dropdown-menu.show{
+    height: 50vh;
+    animation: 1s;
+    display: block;
+}

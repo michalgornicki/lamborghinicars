@@ -1,0 +1,17 @@
+.video{
+    width: 100%;
+}
+
+.nav-link{
+    color: white!important;
+}
+
+.dropdown-menu[data-bs-popper] {
+    position: absolute!important;
+    left: 0!important;
+    
+}
+
+.dropdown-menu{
+}
+

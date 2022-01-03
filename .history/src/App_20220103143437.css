@@ -1,0 +1,25 @@
+.video {
+  width: 100%;
+}
+
+.nav-link {
+  color: white !important;
+}
+
+.dropdown-menu {
+  background-color: black;
+}
+
+.dropdown-item {
+  color: white !important;
+}
+
+.dropdown-menu {
+  display: block;
+  visibility: visible;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 0.5s ease all;
+}
+
+

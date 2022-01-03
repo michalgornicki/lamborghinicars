@@ -1,0 +1,13 @@
+.video{
+    width: 100%;
+}
+
+.nav-link{
+    color: white!important;
+}
+
+.dropdown-menu{
+    position: inherit;
+    min-width: 100vw!important;
+    left: 0!important;
+}
