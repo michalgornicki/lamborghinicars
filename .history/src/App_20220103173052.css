@@ -27,11 +27,10 @@ body{
     height: 90vh;
     object-fit: cover;
     transition: 10s;
-    transform: scale(1.2);
 }
 
 .image:hover{
-    transform: scale(1);
+    transform: scale(1.1);
 }
 
 .image-square{

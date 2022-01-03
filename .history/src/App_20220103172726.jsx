@@ -90,7 +90,7 @@ function App() {
         <source src={sample} type="video/mp4" />
       </video>
 
-      <Carousel pause={false} fade className="my-5" indicators={false}>
+      <Carousel pause fade className="my-5" indicators={false}>
         <Carousel.Item>
           <img className="d-block w-100" src={Img2} alt="Second slide" />
 
@@ -136,7 +136,7 @@ function App() {
       </Container>
 
       <Container className="mw-100 position-relative p-0 mb-5">
-        <div className="overflow-hidden"><img className="image" src={Dealer} alt="" /></div>
+        <img className="image" src={Dealer} alt="" />
         <div className="image-text">
           <h3 className="display-4">dealer locator</h3>
           <h3 className="display-1">Find dealer in your city</h3>
