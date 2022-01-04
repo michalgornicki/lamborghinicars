@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/lamborghinicars/static/css/main.cbb97bc4.css",
-    "main.js": "/lamborghinicars/static/js/main.11c68f48.js",
+    "main.js": "/lamborghinicars/static/js/main.56ad1fb0.js",
     "static/js/787.318c229e.chunk.js": "/lamborghinicars/static/js/787.318c229e.chunk.js",
     "static/media/sample.mp4": "/lamborghinicars/static/media/sample.1ff1d9c4cf49d5be3525.mp4",
     "static/media/7.jpg": "/lamborghinicars/static/media/7.200b74fac8d9774e1878.jpg",
@@ -16,11 +16,11 @@
     "static/media/wheel.png": "/lamborghinicars/static/media/wheel.d6fda22aabb962ecb596.png",
     "index.html": "/lamborghinicars/index.html",
     "main.cbb97bc4.css.map": "/lamborghinicars/static/css/main.cbb97bc4.css.map",
-    "main.11c68f48.js.map": "/lamborghinicars/static/js/main.11c68f48.js.map",
+    "main.56ad1fb0.js.map": "/lamborghinicars/static/js/main.56ad1fb0.js.map",
     "787.318c229e.chunk.js.map": "/lamborghinicars/static/js/787.318c229e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cbb97bc4.css",
-    "static/js/main.11c68f48.js"
+    "static/js/main.56ad1fb0.js"
   ]
 }
