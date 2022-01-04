@@ -19,8 +19,6 @@ import Logo from "./logo.png";
 import Dealer from "./dealer.jpg";
 import Lambo from "./lambo.png";
 import Wheel from "./wheel.png";
-import up from "./up.png";
-
 
 function App() {
   window.onscroll = () => {
@@ -98,15 +96,11 @@ function App() {
         </Container>
       </Navbar>
 
-      <div>
-
       <video className="video" autoPlay loop muted>
         <source src={sample} type="video/mp4" />
       </video>
 
-      </div> 
-
-      <Carousel pause={false} fade className="" indicators={false}>
+      <Carousel pause={false} fade className="m-5" indicators={false}>
         <Carousel.Item>
           <img className="d-block w-100" src={Img2} alt="Second slide" />
 
@@ -200,8 +194,6 @@ function App() {
           <h3 className="display-1">Find dealer in your city</h3>
         </div>
       </Container>
-
-      <a href="#top">  <img src={up} alt="" className="up-icon shadow" /></a>
 
       <Navbar
         className="py-5"

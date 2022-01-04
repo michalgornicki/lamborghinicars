@@ -19,8 +19,6 @@ import Logo from "./logo.png";
 import Dealer from "./dealer.jpg";
 import Lambo from "./lambo.png";
 import Wheel from "./wheel.png";
-import up from "./up.png";
-
 
 function App() {
   window.onscroll = () => {
@@ -200,8 +198,6 @@ function App() {
           <h3 className="display-1">Find dealer in your city</h3>
         </div>
       </Container>
-
-      <a href="#top">  <img src={up} alt="" className="up-icon shadow" /></a>
 
       <Navbar
         className="py-5"

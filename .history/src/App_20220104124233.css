@@ -109,6 +109,8 @@ body{
 }
 
 .carousel{
+    display: block;
+    top: 0;
     margin-bottom: 10vh!important;
 }
 
@@ -176,18 +178,6 @@ body{
 @keyframes wheel-move{
     0%{transform: rotate(0deg);}
     100%{transform: rotate(-800deg);}
-}
-
-.up-icon{
-    position: fixed;
-    display:block;
-    right: 5%;
-    top: 85%;
-    width: 4rem;
-    padding: 1.5rem;
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 100%;
-    z-index: 1000;
 }
 
 @media screen and (max-width: 800px) {
