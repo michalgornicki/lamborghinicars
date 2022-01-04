@@ -123,12 +123,12 @@ function App() {
         </Carousel.Item>
       </Carousel>
 
-      <h3 className="display-5 text-center w-50">OTHER MODELS</h3>
+      <h3 className="display-4 text-center w-50">OTHER MODELS</h3>
 
       <Container className="w-75 m-auto position-relative p-0 mb-5 d-flex flex-lg-row flex-column">
         <div className="column d-flex flex-column">
-          <div className="overflow-hidden mx-4"><img className="image-square" src={Img6} alt="" /></div>
-          <div className="overflow-hidden  mx-4"><img className="image-square" src={Img7} alt="" /></div>
+          <div className="overflow-hidden"><img className="image-square" src={Img6} alt="" /></div>
+          <div className="overflow-hidden"><img className="image-square" src={Img7} alt="" /></div>
         </div>
         <div className="column d-flex flex-column">
         <div className="overflow-hidden"><img className="image-square-large" src={Img8} alt="" /></div>

@@ -72,10 +72,7 @@ body{
   color: white !important;
 }
 
-.nav-item-dropdown:hover, .nav-link:hover{
-    color: rgb(151, 151, 151)!important;
-    transition: 0.2s;
-}
+.nav-item-dropdown:hover
 
 .dropdown-menu {
   background-color: black;
