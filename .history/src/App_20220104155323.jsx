@@ -38,7 +38,6 @@ function App() {
     };
   }
   
-
   const counter = () => {
     var i = 0;
     var j = 5800;

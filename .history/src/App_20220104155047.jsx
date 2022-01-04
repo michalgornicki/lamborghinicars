@@ -34,10 +34,8 @@ function App() {
         setScrolled(true);
         counter();
       }
-
     };
   }
-  
 
   const counter = () => {
     var i = 0;
@@ -46,12 +44,12 @@ function App() {
     var intervSpeed = setInterval(function () {
       if (i < 355) document.getElementById("speed").innerHTML = ++i;
       else clearInterval(intervSpeed);
-    }, 15);
+    }, 10);
 
     var intervPower = setInterval(function () {
       if (i < 780) document.getElementById("power").innerHTML = ++i;
       else clearInterval(intervPower);
-    }, 5);
+    }, 10);
 
     var intervDispl = setInterval(function () {
       if (j < 6498) document.getElementById("displacement").innerHTML = ++j;

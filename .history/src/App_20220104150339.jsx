@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import sample from "./sample.mp4";
@@ -7,6 +7,7 @@ import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Container from "react-bootstrap/Container";
 import Carousel from "react-bootstrap/Carousel";
+import Image from "react-bootstrap/Image";
 import Img2 from "./2.jpg";
 import Img3 from "./3.jpg";
 import Img4 from "./4.jpg";
@@ -21,43 +22,25 @@ import Wheel from "./wheel.png";
 import up from "./up.png";
 
 function App() {
-  const [scrolled, setScrolled] = useState(false);
-
-  window.onscroll = console.log(scrolled);
-
-  if (scrolled === false) {
-    window.onscroll = () => {
-      if (window.pageYOffset > 1350) {
-        document.getElementById("car-container").className += " " + "car-move";
-        document.getElementById("wheel1").className += " " + "wheel-move";
-        document.getElementById("wheel2").className += " " + "wheel-move";
-        setScrolled(true);
-        counter();
-      }
-
-    };
-  }
-  
-
-  const counter = () => {
-    var i = 0;
-    var j = 5800;
-
-    var intervSpeed = setInterval(function () {
-      if (i < 355) document.getElementById("speed").innerHTML = ++i;
-      else clearInterval(intervSpeed);
-    }, 15);
-
-    var intervPower = setInterval(function () {
-      if (i < 780) document.getElementById("power").innerHTML = ++i;
-      else clearInterval(intervPower);
-    }, 5);
-
-    var intervDispl = setInterval(function () {
-      if (j < 6498) document.getElementById("displacement").innerHTML = ++j;
-      else clearInterval(intervDispl);
-    }, 1);
+  window.onscroll = () => {
+    if (window.pageYOffset > 1300) {
+      document.getElementById("car-container").className += " " + "car-move";
+      document.getElementById("wheel1").className += " " + "wheel-move";
+      document.getElementById("wheel2").className += " " + "wheel-move";
+    }
   };
+
+  var i = 0;
+
+  var intervSpeed = setInterval(function () {
+    if (i < 355) document.getElementById("speed").innerHTML = ++i;
+    else clearInterval(interv);
+  }, 2000 / 355);
+
+  var interv = setInterval(function () {
+    if (i < 355) document.getElementById("speed").innerHTML = ++i;
+    else clearInterval(interv);
+  }, 2000 / 355);
 
   return (
     <div>
@@ -180,22 +163,17 @@ function App() {
           </div>
           <div className="flex-row border-bottom mb-3">
             <span className="d-inline-block w-50 text-left">Displacement</span>
-            <span className="d-inline-block w-50">
-              {" "}
-              <span id="displacement">0</span> cm3 (396.5 cu in)
-            </span>
+            <span className="d-inline-block w-50">6,498 cm3 (396.5 cu in)</span>
           </div>
           <div className="flex-row border-bottom mb-3">
             <span className="d-inline-block w-50 text-left">MAX. POWER</span>
             <span className="d-inline-block w-50">
-              <span id="power">0</span> HP at 8,500 rpm
+              <span id="power">780</span>  HP at 8,500 rpm
             </span>
           </div>
           <div className="flex-row border-bottom mb-3">
             <span className="d-inline-block w-50 text-left">TOP SPEED</span>
-            <span className="d-inline-block w-50">
-              <span id="speed">0</span> km/h
-            </span>
+            <span className="d-inline-block w-50"><span id="speed">355</span> km/h</span>
           </div>
           <div className="flex-row border-bottom mb-3">
             <span className="d-inline-block w-50 text-left">

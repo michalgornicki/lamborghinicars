@@ -34,10 +34,8 @@ function App() {
         setScrolled(true);
         counter();
       }
-
     };
   }
-  
 
   const counter = () => {
     var i = 0;
@@ -46,12 +44,12 @@ function App() {
     var intervSpeed = setInterval(function () {
       if (i < 355) document.getElementById("speed").innerHTML = ++i;
       else clearInterval(intervSpeed);
-    }, 15);
+    }, 10);
 
     var intervPower = setInterval(function () {
       if (i < 780) document.getElementById("power").innerHTML = ++i;
       else clearInterval(intervPower);
-    }, 5);
+    }, 20);
 
     var intervDispl = setInterval(function () {
       if (j < 6498) document.getElementById("displacement").innerHTML = ++j;
@@ -204,7 +202,7 @@ function App() {
             <span className="d-inline-block w-50">2.8 s</span>
           </div>
           <div className="flex-row">
-            <span className="d-inline-block w-50 text-left align-top">
+            <span className="d-inline-block w-50 text-left align-top display-5">
               TRANSMISSION TYPE
             </span>
             <span className="d-inline-block w-50">

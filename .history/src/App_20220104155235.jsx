@@ -37,7 +37,9 @@ function App() {
 
     };
   }
-  
+        else {
+        setScrolled(false)
+      }
 
   const counter = () => {
     var i = 0;

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import sample from "./sample.mp4";
@@ -7,6 +7,7 @@ import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Container from "react-bootstrap/Container";
 import Carousel from "react-bootstrap/Carousel";
+import Image from "react-bootstrap/Image";
 import Img2 from "./2.jpg";
 import Img3 from "./3.jpg";
 import Img4 from "./4.jpg";
@@ -21,43 +22,35 @@ import Wheel from "./wheel.png";
 import up from "./up.png";
 
 function App() {
-  const [scrolled, setScrolled] = useState(false);
+  window.onscroll = () => {
+    if (window.pageYOffset > 1350) {
+      document.getElementById("car-container").className += " " + "car-move";
+      document.getElementById("wheel1").className += " " + "wheel-move";
+      document.getElementById("wheel2").className += " " + "wheel-move";
+    }
+  };
 
-  window.onscroll = console.log(scrolled);
 
-  if (scrolled === false) {
-    window.onscroll = () => {
-      if (window.pageYOffset > 1350) {
-        document.getElementById("car-container").className += " " + "car-move";
-        document.getElementById("wheel1").className += " " + "wheel-move";
-        document.getElementById("wheel2").className += " " + "wheel-move";
-        setScrolled(true);
-        counter();
-      }
+   window.pageYOffset > 1350 = () {
+      var i = 0;
+      var j = 5800;
 
-    };
-  }
-  
+      var intervSpeed = setInterval(function () {
+        if (i < 355) document.getElementById("speed").innerHTML = ++i;
+        else clearInterval(intervSpeed);
+      }, 10);
 
-  const counter = () => {
-    var i = 0;
-    var j = 5800;
-
-    var intervSpeed = setInterval(function () {
-      if (i < 355) document.getElementById("speed").innerHTML = ++i;
-      else clearInterval(intervSpeed);
-    }, 15);
-
-    var intervPower = setInterval(function () {
-      if (i < 780) document.getElementById("power").innerHTML = ++i;
-      else clearInterval(intervPower);
-    }, 5);
+      var intervPower = setInterval(function () {
+        if (i < 780) document.getElementById("power").innerHTML = ++i;
+        else clearInterval(intervPower);
+      }, 20);
+    }
 
     var intervDispl = setInterval(function () {
       if (j < 6498) document.getElementById("displacement").innerHTML = ++j;
       else clearInterval(intervDispl);
     }, 1);
-  };
+
 
   return (
     <div>

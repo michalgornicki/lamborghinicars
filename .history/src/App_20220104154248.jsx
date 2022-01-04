@@ -21,42 +21,45 @@ import Wheel from "./wheel.png";
 import up from "./up.png";
 
 function App() {
+
   const [scrolled, setScrolled] = useState(false);
-
-  window.onscroll = console.log(scrolled);
-
-  if (scrolled === false) {
-    window.onscroll = () => {
-      if (window.pageYOffset > 1350) {
-        document.getElementById("car-container").className += " " + "car-move";
-        document.getElementById("wheel1").className += " " + "wheel-move";
-        document.getElementById("wheel2").className += " " + "wheel-move";
-        setScrolled(true);
-        counter();
-      }
-
-    };
-  }
-  
+  const [disabled, setDisabled] = useState(false);
 
   const counter = () => {
+    
     var i = 0;
     var j = 5800;
 
-    var intervSpeed = setInterval(function () {
+    if (scrolled === true) {
+      var intervSpeed = setInterval(function () {
       if (i < 355) document.getElementById("speed").innerHTML = ++i;
       else clearInterval(intervSpeed);
-    }, 15);
+    }, 10);
 
     var intervPower = setInterval(function () {
       if (i < 780) document.getElementById("power").innerHTML = ++i;
       else clearInterval(intervPower);
-    }, 5);
+    }, 20);
+  
 
-    var intervDispl = setInterval(function () {
-      if (j < 6498) document.getElementById("displacement").innerHTML = ++j;
-      else clearInterval(intervDispl);
-    }, 1);
+  var intervDispl = setInterval(function () {
+    if (j < 6498) document.getElementById("displacement").innerHTML = ++j;
+    else clearInterval(intervDispl);
+  }, 1);
+  setScrolled(false)
+
+}
+  }
+
+  window.onscroll = () => {
+    if (window.pageYOffset > 1350) {
+      document.getElementById("car-container").className += " " + "car-move";
+      document.getElementById("wheel1").className += " " + "wheel-move";
+      document.getElementById("wheel2").className += " " + "wheel-move";
+      if (di)
+      setDisabled(true)
+      counter()
+    }
   };
 
   return (

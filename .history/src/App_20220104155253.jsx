@@ -37,6 +37,10 @@ function App() {
 
     };
   }
+  else {
+    
+    setScrolled(false)
+  }
   
 
   const counter = () => {

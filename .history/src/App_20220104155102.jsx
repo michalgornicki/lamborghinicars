@@ -34,10 +34,8 @@ function App() {
         setScrolled(true);
         counter();
       }
-
     };
   }
-  
 
   const counter = () => {
     var i = 0;
@@ -51,7 +49,7 @@ function App() {
     var intervPower = setInterval(function () {
       if (i < 780) document.getElementById("power").innerHTML = ++i;
       else clearInterval(intervPower);
-    }, 5);
+    }, 4);
 
     var intervDispl = setInterval(function () {
       if (j < 6498) document.getElementById("displacement").innerHTML = ++j;

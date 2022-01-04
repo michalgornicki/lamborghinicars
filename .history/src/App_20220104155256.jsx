@@ -37,6 +37,11 @@ function App() {
 
     };
   }
+  else {
+    window.onscroll = () => {
+    setScrolled(false)
+    }
+  }
   
 
   const counter = () => {

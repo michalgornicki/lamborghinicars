@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import sample from "./sample.mp4";
@@ -7,6 +7,7 @@ import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Container from "react-bootstrap/Container";
 import Carousel from "react-bootstrap/Carousel";
+import Image from "react-bootstrap/Image";
 import Img2 from "./2.jpg";
 import Img3 from "./3.jpg";
 import Img4 from "./4.jpg";
@@ -20,44 +21,17 @@ import Lambo from "./lambo.png";
 import Wheel from "./wheel.png";
 import up from "./up.png";
 
+
 function App() {
-  const [scrolled, setScrolled] = useState(false);
-
-  window.onscroll = console.log(scrolled);
-
-  if (scrolled === false) {
-    window.onscroll = () => {
-      if (window.pageYOffset > 1350) {
-        document.getElementById("car-container").className += " " + "car-move";
-        document.getElementById("wheel1").className += " " + "wheel-move";
-        document.getElementById("wheel2").className += " " + "wheel-move";
-        setScrolled(true);
-        counter();
-      }
-
-    };
-  }
-  
-
-  const counter = () => {
-    var i = 0;
-    var j = 5800;
-
-    var intervSpeed = setInterval(function () {
-      if (i < 355) document.getElementById("speed").innerHTML = ++i;
-      else clearInterval(intervSpeed);
-    }, 15);
-
-    var intervPower = setInterval(function () {
-      if (i < 780) document.getElementById("power").innerHTML = ++i;
-      else clearInterval(intervPower);
-    }, 5);
-
-    var intervDispl = setInterval(function () {
-      if (j < 6498) document.getElementById("displacement").innerHTML = ++j;
-      else clearInterval(intervDispl);
-    }, 1);
+  window.onscroll = () => {
+    if (window.pageYOffset > 1300) {
+      document.getElementById("car-container").className += " " + "car-move";
+      document.getElementById("wheel1").className += " " + "wheel-move";
+      document.getElementById("wheel2").className += " " + "wheel-move";
+    }
   };
+
+  
 
   return (
     <div>
@@ -127,10 +101,12 @@ function App() {
       </Navbar>
 
       <div>
-        <video className="video" autoPlay loop muted>
-          <source src={sample} type="video/mp4" />
-        </video>
-      </div>
+
+      <video className="video" autoPlay loop muted>
+        <source src={sample} type="video/mp4" />
+      </video>
+
+      </div> 
 
       <Carousel pause={false} fade className="" indicators={false}>
         <Carousel.Item>
@@ -173,44 +149,28 @@ function App() {
         </Container>
 
         <div className="d-flex flex-column mx-auto w-50 m-top-30">
-          <div className="flex-row">
-            <span className="d-inline-block w-100 text-center mb-5 display-5">
-              Technical specification
-            </span>
+        <div className="flex-row">
+            <span className="d-inline-block w-100 text-center mb-5 display-5">Technical specification</span>
           </div>
           <div className="flex-row border-bottom mb-3">
             <span className="d-inline-block w-50 text-left">Displacement</span>
-            <span className="d-inline-block w-50">
-              {" "}
-              <span id="displacement">0</span> cm3 (396.5 cu in)
-            </span>
+            <span className="d-inline-block w-50">6,498 cm3 (396.5 cu in)</span>
           </div>
           <div className="flex-row border-bottom mb-3">
-            <span className="d-inline-block w-50 text-left">MAX. POWER</span>
-            <span className="d-inline-block w-50">
-              <span id="power">0</span> HP at 8,500 rpm
-            </span>
+          <span className="d-inline-block w-50 text-left">MAX. POWER</span>
+            <span className="d-inline-block w-50">780 CV (574 kW) at 8,500 rpm</span>
           </div>
           <div className="flex-row border-bottom mb-3">
-            <span className="d-inline-block w-50 text-left">TOP SPEED</span>
-            <span className="d-inline-block w-50">
-              <span id="speed">0</span> km/h
-            </span>
+          <span className="d-inline-block w-50 text-left">TOP SPEED</span>
+            <span className="d-inline-block w-50">355 km/h</span>
           </div>
           <div className="flex-row border-bottom mb-3">
-            <span className="d-inline-block w-50 text-left">
-              ACCELERATION 0-100 KM/H (MPH 0-62)
-            </span>
+          <span className="d-inline-block w-50 text-left">ACCELERATION 0-100 KM/H (MPH 0-62)</span>
             <span className="d-inline-block w-50">2.8 s</span>
           </div>
           <div className="flex-row">
-            <span className="d-inline-block w-50 text-left align-top">
-              TRANSMISSION TYPE
-            </span>
-            <span className="d-inline-block w-50">
-              Electronically controlled all-wheel drive system (Haldex gen. IV)
-              with rear mechanical self-locking differential
-            </span>
+          <span className="d-inline-block w-50 text-left align-top">TRANSMISSION TYPE</span>
+            <span className="d-inline-block w-50">Electronically controlled all-wheel drive system (Haldex gen. IV) with rear mechanical self-locking differential</span>
           </div>
         </div>
       </Container>
@@ -243,10 +203,7 @@ function App() {
         </div>
       </Container>
 
-      <a href="#top">
-        {" "}
-        <img src={up} alt="" className="up-icon shadow" />
-      </a>
+      <a href="#top">  <img src={up} alt="" className="up-icon shadow" /></a>
 
       <Navbar
         className="py-5"
