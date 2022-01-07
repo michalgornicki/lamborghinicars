@@ -124,7 +124,7 @@ function App() {
         </Container>
       </Navbar>
 
-      <Container className="position-relative mw-100 m-0 p-0">
+      <Container>
         <video className="video" autoPlay loop muted>
           <source src={sample} type="video/mp4" />
         </video>

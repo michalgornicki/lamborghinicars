@@ -34,8 +34,10 @@ function App() {
         setScrolled(true);
         counter();
       }
+
     };
   }
+  
 
   const counter = () => {
     var i = 0;
@@ -124,13 +126,11 @@ function App() {
         </Container>
       </Navbar>
 
-      <Container className="position-relative mw-100 m-0 p-0">
         <video className="video" autoPlay loop muted>
           <source src={sample} type="video/mp4" />
         </video>
-      </Container>
 
-      <Carousel pause={false} fade indicators={false}>
+      <Carousel  pause={false} fade className="" indicators={false}>
         <Carousel.Item>
           <img className="d-block w-100" src={Img2} alt="Second slide" />
 
