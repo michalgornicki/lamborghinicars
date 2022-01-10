@@ -33,10 +33,10 @@ function App() {
     }
   };
 
-  const container2Fade = () => {
+  const containerFade2 = () => {
     if (
       document.getElementsByClassName("container2")[0].getBoundingClientRect()
-        .top < 300
+        .top < 100
     ) {
       document.getElementsByClassName("container2")[0].style.filter="opacity(1)"
     }
@@ -45,47 +45,10 @@ function App() {
     }
   };
 
-  const container3Fade = () => {
-    if (
-      document.getElementsByClassName("container3")[0].getBoundingClientRect()
-        .top < 300
-    ) {
-      document.getElementsByClassName("container3")[0].style.filter="opacity(1)"
-    }
-    else {
-      document.getElementsByClassName("container3")[0].style.filter="opacity(0)"
-    }
-  };
-
-  const container4Fade = () => {
-    if (
-      document.getElementsByClassName("container4")[0].getBoundingClientRect()
-        .top < 300
-    ) {
-      document.getElementsByClassName("container4")[0].style.filter="opacity(1)"
-    }
-    else {
-      document.getElementsByClassName("container4")[0].style.filter="opacity(0)"
-    }
-  };
-
-  const container5Fade = () => {
-    if (
-      document.getElementsByClassName("container5")[0].getBoundingClientRect()
-        .top < 300
-    ) {
-      document.getElementsByClassName("container5")[0].style.filter="opacity(1)"
-    }
-    else {
-      document.getElementsByClassName("container5")[0].style.filter="opacity(0)"
-    }
-  };
-
   window.addEventListener("scroll", carMove);
   window.addEventListener("scroll", container2Fade);
   window.addEventListener("scroll", container3Fade);
   window.addEventListener("scroll", container4Fade);
-  window.addEventListener("scroll", container5Fade);
 
   return (
     <div>
@@ -195,7 +158,7 @@ function App() {
         </Carousel>
       </Container>
 
-      <Container className="container3  mw-100 p-0 m-0 h-100vh">
+      <Container className="container3 h-100vh">
         <Container className="car-container" id="car-container">
           <img className="car" src={Lambo} alt="" />
           <img className="wheel1" id="wheel1" src={Wheel} alt="" />
@@ -264,7 +227,7 @@ function App() {
         </Container>
       </Container>
 
-      <Container className="container5 m-0 p-0 mw-100">
+      <Container className="container4 m-0 p-0 mw-100">
         <Container className="mw-100 position-relative p-0 mb-5">
           <div className="overflow-hidden">
             <img className="image" src={Dealer} alt="" />

@@ -30,62 +30,10 @@ function App() {
       document.getElementById("wheel1").className += " wheel-move";
       document.getElementById("wheel2").className += " wheel-move";
       window.removeEventListener("scroll", carMove);
-    }
-  };
-
-  const container2Fade = () => {
-    if (
-      document.getElementsByClassName("container2")[0].getBoundingClientRect()
-        .top < 300
-    ) {
-      document.getElementsByClassName("container2")[0].style.filter="opacity(1)"
-    }
-    else {
-      document.getElementsByClassName("container2")[0].style.filter="opacity(0)"
-    }
-  };
-
-  const container3Fade = () => {
-    if (
-      document.getElementsByClassName("container3")[0].getBoundingClientRect()
-        .top < 300
-    ) {
-      document.getElementsByClassName("container3")[0].style.filter="opacity(1)"
-    }
-    else {
-      document.getElementsByClassName("container3")[0].style.filter="opacity(0)"
-    }
-  };
-
-  const container4Fade = () => {
-    if (
-      document.getElementsByClassName("container4")[0].getBoundingClientRect()
-        .top < 300
-    ) {
-      document.getElementsByClassName("container4")[0].style.filter="opacity(1)"
-    }
-    else {
-      document.getElementsByClassName("container4")[0].style.filter="opacity(0)"
-    }
-  };
-
-  const container5Fade = () => {
-    if (
-      document.getElementsByClassName("container5")[0].getBoundingClientRect()
-        .top < 300
-    ) {
-      document.getElementsByClassName("container5")[0].style.filter="opacity(1)"
-    }
-    else {
-      document.getElementsByClassName("container5")[0].style.filter="opacity(0)"
-    }
+    } 
   };
 
   window.addEventListener("scroll", carMove);
-  window.addEventListener("scroll", container2Fade);
-  window.addEventListener("scroll", container3Fade);
-  window.addEventListener("scroll", container4Fade);
-  window.addEventListener("scroll", container5Fade);
 
   return (
     <div>
@@ -195,14 +143,14 @@ function App() {
         </Carousel>
       </Container>
 
-      <Container className="container3  mw-100 p-0 m-0 h-100vh">
+      <Container className="container3 h-100vh">
         <Container className="car-container" id="car-container">
           <img className="car" src={Lambo} alt="" />
           <img className="wheel1" id="wheel1" src={Wheel} alt="" />
           <img className="wheel2" id="wheel2" src={Wheel} alt="" />
         </Container>
 
-        <div className="d-flex flex-column mx-auto w-50 w-sm-100 m-top-30">
+        <div className="d-flex flex-column mx-auto w-xl-50 m-top-30">
           <div className="flex-row">
             <span className="d-inline-block w-100 text-center mb-5 display-5">
               Technical specification
@@ -264,7 +212,7 @@ function App() {
         </Container>
       </Container>
 
-      <Container className="container5 m-0 p-0 mw-100">
+      <Container className="container4 m-0 p-0 mw-100">
         <Container className="mw-100 position-relative p-0 mb-5">
           <div className="overflow-hidden">
             <img className="image" src={Dealer} alt="" />

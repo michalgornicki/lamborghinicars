@@ -5,8 +5,8 @@ body{
     overflow-x: hidden;
 }
 
-.container2, .container3, .container4, .container5 {
-    transition: 2s;
+.container2, .container3, .container4 {
+    transition: 1s;
     filter: opacity(0);
     overflow-x: hidden;
 }

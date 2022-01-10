@@ -5,11 +5,7 @@ body{
     overflow-x: hidden;
 }
 
-.container2, .container3, .container4, .container5 {
-    transition: 2s;
-    filter: opacity(0);
-    overflow-x: hidden;
-}
+.container1, .container2, .container3, .container
 
 .navbar{
     background-color: rgba(0, 0, 0, 1)!important;
@@ -208,20 +204,4 @@ body{
     .mobile-hide{
         display: none;
     }
-    
-
-    .car-move{
-        animation: 4s car-move forwards;
-    }
-    
-    @keyframes car-move{
-        0%{transform: translateX(180%);}
-        100%{transform: translateX(-80%);}
-    }
-
-    .w-sm-100{
-        width: 100%!important;
-    }
-
-
 }

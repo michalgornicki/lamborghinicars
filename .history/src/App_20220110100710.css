@@ -5,9 +5,8 @@ body{
     overflow-x: hidden;
 }
 
-.container2, .container3, .container4, .container5 {
-    transition: 2s;
-    filter: opacity(0);
+.container2, .container3, .container4 {
+    transition: 1s;
     overflow-x: hidden;
 }
 
@@ -216,7 +215,7 @@ body{
     
     @keyframes car-move{
         0%{transform: translateX(180%);}
-        100%{transform: translateX(-80%);}
+        100%{transform: translateX(-70%);}
     }
 
     .w-sm-100{

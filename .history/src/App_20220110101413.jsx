@@ -69,15 +69,15 @@ function App() {
     }
   };
 
-  const container5Fade = () => {
+  const container4Fade = () => {
     if (
-      document.getElementsByClassName("container5")[0].getBoundingClientRect()
+      document.getElementsByClassName("container4")[0].getBoundingClientRect()
         .top < 300
     ) {
-      document.getElementsByClassName("container5")[0].style.filter="opacity(1)"
+      document.getElementsByClassName("container4")[0].style.filter="opacity(1)"
     }
     else {
-      document.getElementsByClassName("container5")[0].style.filter="opacity(0)"
+      document.getElementsByClassName("container4")[0].style.filter="opacity(0)"
     }
   };
 

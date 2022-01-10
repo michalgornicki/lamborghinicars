@@ -69,23 +69,10 @@ function App() {
     }
   };
 
-  const container5Fade = () => {
-    if (
-      document.getElementsByClassName("container5")[0].getBoundingClientRect()
-        .top < 300
-    ) {
-      document.getElementsByClassName("container5")[0].style.filter="opacity(1)"
-    }
-    else {
-      document.getElementsByClassName("container5")[0].style.filter="opacity(0)"
-    }
-  };
-
   window.addEventListener("scroll", carMove);
   window.addEventListener("scroll", container2Fade);
   window.addEventListener("scroll", container3Fade);
   window.addEventListener("scroll", container4Fade);
-  window.addEventListener("scroll", container5Fade);
 
   return (
     <div>
@@ -264,7 +251,7 @@ function App() {
         </Container>
       </Container>
 
-      <Container className="container5 m-0 p-0 mw-100">
+      <Container className="container4 m-0 p-0 mw-100">
         <Container className="mw-100 position-relative p-0 mb-5">
           <div className="overflow-hidden">
             <img className="image" src={Dealer} alt="" />

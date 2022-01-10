@@ -21,71 +21,59 @@ import Wheel from "./wheel.png";
 import up from "./up.png";
 
 function App() {
-  const carMove = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  window.onscroll = console.log(scrolled);
+
+  if (scrolled === false) {
+    window.onscroll = () => {
+      if (window.pageYOffset > 1350) {
+        document.getElementById("car-container").className += " " + "car-move";
+        document.getElementById("wheel1").className += " " + "wheel-move";
+        document.getElementById("wheel2").className += " " + "wheel-move";
+        setScrolled(true);
+        counter();
+      }
+    };
+  }
+
+  const scrolling = () => {
     if (
-      document.getElementsByClassName("container3")[0].getBoundingClientRect()
-        .top < 300
+      document.getElementById("container4").getBoundingClientRect().top < 100
     ) {
-      document.getElementById("car-container").className += " car-move";
-      document.getElementById("wheel1").className += " wheel-move";
-      document.getElementById("wheel2").className += " wheel-move";
-      window.removeEventListener("scroll", carMove);
+      document.getElementsByClassName("skill-wrapper")[0].style.filter =
+        "opacity(1)";
+      document.getElementsByClassName("skill-wrapper")[1].style.filter =
+        "opacity(1)";
+    } else {
+      document.getElementsByClassName("skill-wrapper")[0].style.filter =
+        "opacity(0)";
+      document.getElementsByClassName("skill-wrapper")[1].style.filter =
+        "opacity(0)";
     }
   };
 
-  const container2Fade = () => {
-    if (
-      document.getElementsByClassName("container2")[0].getBoundingClientRect()
-        .top < 300
-    ) {
-      document.getElementsByClassName("container2")[0].style.filter="opacity(1)"
-    }
-    else {
-      document.getElementsByClassName("container2")[0].style.filter="opacity(0)"
-    }
-  };
+  window.addEventListener("scroll", scrolling);
 
-  const container3Fade = () => {
-    if (
-      document.getElementsByClassName("container3")[0].getBoundingClientRect()
-        .top < 300
-    ) {
-      document.getElementsByClassName("container3")[0].style.filter="opacity(1)"
-    }
-    else {
-      document.getElementsByClassName("container3")[0].style.filter="opacity(0)"
-    }
-  };
+  const counter = () => {
+    var i = 0;
+    var j = 5800;
 
-  const container4Fade = () => {
-    if (
-      document.getElementsByClassName("container4")[0].getBoundingClientRect()
-        .top < 300
-    ) {
-      document.getElementsByClassName("container4")[0].style.filter="opacity(1)"
-    }
-    else {
-      document.getElementsByClassName("container4")[0].style.filter="opacity(0)"
-    }
-  };
+    var intervSpeed = setInterval(function () {
+      if (i < 355) document.getElementById("speed").innerHTML = ++i;
+      else clearInterval(intervSpeed);
+    }, 15);
 
-  const container5Fade = () => {
-    if (
-      document.getElementsByClassName("container5")[0].getBoundingClientRect()
-        .top < 300
-    ) {
-      document.getElementsByClassName("container5")[0].style.filter="opacity(1)"
-    }
-    else {
-      document.getElementsByClassName("container5")[0].style.filter="opacity(0)"
-    }
-  };
+    var intervPower = setInterval(function () {
+      if (i < 780) document.getElementById("power").innerHTML = ++i;
+      else clearInterval(intervPower);
+    }, 5);
 
-  window.addEventListener("scroll", carMove);
-  window.addEventListener("scroll", container2Fade);
-  window.addEventListener("scroll", container3Fade);
-  window.addEventListener("scroll", container4Fade);
-  window.addEventListener("scroll", container5Fade);
+    var intervDispl = setInterval(function () {
+      if (j < 6498) document.getElementById("displacement").innerHTML = ++j;
+      else clearInterval(intervDispl);
+    }, 1);
+  };
 
   return (
     <div>
@@ -161,48 +149,50 @@ function App() {
       </Container>
 
       <Container className="container2 mw-100 p-0 m-0">
-        <Carousel pause={false} fade indicators={false}>
-          <Carousel.Item>
-            <img className="d-block w-100" src={Img2} alt="Second slide" />
 
-            <Carousel.Caption>
-              <h4 className="display-5">Choose your</h4>
-              <h3 className="display-1">Aventador</h3>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <img className="d-block w-100" src={Img3} alt="Third slide" />
+      <Carousel pause={false} fade indicators={false}>
+        <Carousel.Item>
+          <img className="d-block w-100" src={Img2} alt="Second slide" />
 
-            <Carousel.Caption>
-              <h4 className="display-5">Choose your</h4>
-              <h3 className="display-1">Aventador</h3>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <img className="d-block w-100" src={Img4} alt="First slide" />
-            <Carousel.Caption>
-              <h4 className="display-5">Choose your</h4>
-              <h3 className="display-1">Aventador</h3>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <img className="d-block w-100" src={Img5} alt="First slide" />
-            <Carousel.Caption>
-              <h4 className="display-5">Choose your</h4>
-              <h3 className="display-1">Aventador</h3>
-            </Carousel.Caption>
-          </Carousel.Item>
-        </Carousel>
+          <Carousel.Caption>
+            <h4 className="display-5">Choose your</h4>
+            <h3 className="display-1">Aventador</h3>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img className="d-block w-100" src={Img3} alt="Third slide" />
+
+          <Carousel.Caption>
+            <h4 className="display-5">Choose your</h4>
+            <h3 className="display-1">Aventador</h3>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img className="d-block w-100" src={Img4} alt="First slide" />
+          <Carousel.Caption>
+            <h4 className="display-5">Choose your</h4>
+            <h3 className="display-1">Aventador</h3>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img className="d-block w-100" src={Img5} alt="First slide" />
+          <Carousel.Caption>
+            <h4 className="display-5">Choose your</h4>
+            <h3 className="display-1">Aventador</h3>
+          </Carousel.Caption>
+        </Carousel.Item>
+      </Carousel>
+
       </Container>
 
-      <Container className="container3  mw-100 p-0 m-0 h-100vh">
+      <Container className="container3 h-100vh mobile-hide">
         <Container className="car-container" id="car-container">
           <img className="car" src={Lambo} alt="" />
           <img className="wheel1" id="wheel1" src={Wheel} alt="" />
           <img className="wheel2" id="wheel2" src={Wheel} alt="" />
         </Container>
 
-        <div className="d-flex flex-column mx-auto w-50 w-sm-100 m-top-30">
+        <div className="d-flex flex-column mx-auto w-50 m-top-30">
           <div className="flex-row">
             <span className="d-inline-block w-100 text-center mb-5 display-5">
               Technical specification
@@ -245,35 +235,33 @@ function App() {
         </div>
       </Container>
 
-      <Container className="container4 m-0 p-0 mw-100">
-        <h3 className="display-5 text-center w-50">OTHER MODELS</h3>
-        <Container className="w-lg-75 m-auto position-relative p-0 mb-5 d-flex flex-lg-row flex-column">
-          <div className="column d-flex flex-column">
-            <div className="overflow-hidden mx-lg-4">
-              <img className="image-square" src={Img6} alt="" />
-            </div>
-            <div className="overflow-hidden mx-lg-4">
-              <img className="image-square" src={Img7} alt="" />
-            </div>
+      <Container className="w"
+      <h3 className="display-5 text-center w-50">OTHER MODELS</h3>
+      <Container className="w-lg-75 m-auto position-relative p-0 mb-5 d-flex flex-lg-row flex-column">
+
+        <div className="column d-flex flex-column">
+          <div className="overflow-hidden mx-lg-4">
+            <img className="image-square" src={Img6} alt="" />
           </div>
-          <div className="column d-flex flex-column">
-            <div className="overflow-hidden">
-              <img className="image-square-large" src={Img8} alt="" />
-            </div>
+          <div className="overflow-hidden mx-lg-4">
+            <img className="image-square" src={Img7} alt="" />
           </div>
-        </Container>
+        </div>
+        <div className="column d-flex flex-column">
+          <div className="overflow-hidden">
+            <img className="image-square-large" src={Img8} alt="" />
+          </div>
+        </div>
       </Container>
 
-      <Container className="container5 m-0 p-0 mw-100">
-        <Container className="mw-100 position-relative p-0 mb-5">
-          <div className="overflow-hidden">
-            <img className="image" src={Dealer} alt="" />
-          </div>
-          <div className="image-text">
-            <h3 className="display-4">dealer locator</h3>
-            <h3 className="display-1">Find dealer in your city</h3>
-          </div>
-        </Container>
+      <Container className="mw-100 position-relative p-0 mb-5">
+        <div className="overflow-hidden">
+          <img className="image" src={Dealer} alt="" />
+        </div>
+        <div className="image-text">
+          <h3 className="display-4">dealer locator</h3>
+          <h3 className="display-1">Find dealer in your city</h3>
+        </div>
       </Container>
 
       <a href="#top">

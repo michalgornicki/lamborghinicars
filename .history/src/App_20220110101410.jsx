@@ -69,18 +69,6 @@ function App() {
     }
   };
 
-  const container5Fade = () => {
-    if (
-      document.getElementsByClassName("container5")[0].getBoundingClientRect()
-        .top < 300
-    ) {
-      document.getElementsByClassName("container5")[0].style.filter="opacity(1)"
-    }
-    else {
-      document.getElementsByClassName("container5")[0].style.filter="opacity(0)"
-    }
-  };
-
   window.addEventListener("scroll", carMove);
   window.addEventListener("scroll", container2Fade);
   window.addEventListener("scroll", container3Fade);

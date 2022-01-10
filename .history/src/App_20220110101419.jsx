@@ -77,7 +77,7 @@ function App() {
       document.getElementsByClassName("container5")[0].style.filter="opacity(1)"
     }
     else {
-      document.getElementsByClassName("container5")[0].style.filter="opacity(0)"
+      document.getElementsByClassName("container4")[0].style.filter="opacity(0)"
     }
   };
 
