@@ -31,6 +31,7 @@ function App() {
       document.getElementById("wheel1").className += " wheel-move";
       document.getElementById("wheel2").className += " wheel-move";
       counter()
+
       window.removeEventListener("scroll", carMove);
     }
   };

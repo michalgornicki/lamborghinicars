@@ -30,7 +30,6 @@ function App() {
       document.getElementById("car-container").className += " car-move";
       document.getElementById("wheel1").className += " wheel-move";
       document.getElementById("wheel2").className += " wheel-move";
-      counter()
       window.removeEventListener("scroll", carMove);
     }
   };
@@ -81,26 +80,6 @@ function App() {
     else {
       document.getElementsByClassName("container5")[0].style.filter="opacity(0)"
     }
-  };
-
-  const counter = () => {
-    var i = 0;
-    var j = 5800;
-
-    var intervSpeed = setInterval(function () {
-      if (i < 355) document.getElementById("speed").innerHTML = ++i;
-      else clearInterval(intervSpeed);
-    }, 15);
-
-    var intervPower = setInterval(function () {
-      if (i < 780) document.getElementById("power").innerHTML = ++i;
-      else clearInterval(intervPower);
-    }, 5);
-
-    var intervDispl = setInterval(function () {
-      if (j < 6498) document.getElementById("displacement").innerHTML = ++j;
-      else clearInterval(intervDispl);
-    }, 1);
   };
 
   window.addEventListener("scroll", carMove);
